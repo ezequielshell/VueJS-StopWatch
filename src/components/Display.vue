@@ -46,15 +46,14 @@ export default {
         this.minutes = 59;
       }
 
-      //segundos e minutos zerados
       if (!this.seconds && !this.minutes && !this.hours) {
         clearInterval(this.timerInterval);
         this.seconds = null;
         this.minutes = null;
         this.counting = false;
+        return;
       }
 
-      //minutos não zerados
       if (!this.seconds && this.minutes) {
         this.minutes--;
         this.seconds = 60;
